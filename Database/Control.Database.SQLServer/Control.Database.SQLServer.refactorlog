@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="48fb7570-d301-4268-8263-f91f5404d0ab" ChangeDateTime="01/02/2023 15:23:38">
+    <Property Name="ElementName" Value="[dbo].[Users].[ModifiedBy]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ModifiedAt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30b77715-88e5-4832-8613-a82c017704bc" ChangeDateTime="01/02/2023 15:26:15">
+    <Property Name="ElementName" Value="[dbo].[Users].[F]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FKRole" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b3301f93-2862-4276-9b25-a96580821781" ChangeDateTime="01/02/2023 15:57:21">
+    <Property Name="ElementName" Value="[dbo].[Clients].[Direction]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Clients]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Street" />
+  </Operation>
+</Operations>
