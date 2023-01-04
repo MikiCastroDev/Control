@@ -3,13 +3,27 @@ using System.Collections.Generic;
 
 namespace Control.Infrastructure.Repo.DBContext.Models;
 
-public partial class User
+public partial class Client
 {
     public Guid Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string? Name { get; set; }
 
-    public string Email { get; set; } = null!;
+    public string? BusinessName { get; set; }
+
+    public string? Email { get; set; }
+
+    public string Telephone { get; set; } = null!;
+
+    public string Prefix { get; set; } = null!;
+
+    public string VarNumber { get; set; } = null!;
+
+    public string? Street { get; set; }
+
+    public string? City { get; set; }
+
+    public string? PostalCode { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
@@ -26,4 +40,6 @@ public partial class User
     public int Fkrole { get; set; }
 
     public virtual Role FkroleNavigation { get; set; } = null!;
+
+    public virtual ICollection<Invoice> Invoices { get; } = new List<Invoice>();
 }

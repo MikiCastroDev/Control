@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace Control.Infrastructure.Repo.DBContext.Models;
 
-public partial class User
+public partial class Invoice
 {
     public Guid Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string Ref { get; set; } = null!;
 
-    public string Email { get; set; } = null!;
+    public DateTime Date { get; set; }
+
+    public Guid Fkclient { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
@@ -23,7 +25,7 @@ public partial class User
 
     public string? DisabledBy { get; set; }
 
-    public int Fkrole { get; set; }
+    public virtual Client FkclientNavigation { get; set; } = null!;
 
-    public virtual Role FkroleNavigation { get; set; } = null!;
+    public virtual ICollection<InvoiceLine> InvoiceLines { get; } = new List<InvoiceLine>();
 }

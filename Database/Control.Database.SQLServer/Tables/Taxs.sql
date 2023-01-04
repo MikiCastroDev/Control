@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Taxs]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newid(), 
+    [Description] NCHAR(50) NOT NULL, 
+    [Value] DECIMAL(3, 1) NOT NULL
+)

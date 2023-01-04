@@ -64,6 +64,8 @@
     <Build Include="Tables\Users.sql" />
     <Build Include="Tables\Clients.sql" />
     <Build Include="Tables\Invoices.sql" />
+    <Build Include="Tables\InvoiceLines.sql" />
+    <Build Include="Tables\Taxs.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Control.Database.SQLServer.publish.xml" />
