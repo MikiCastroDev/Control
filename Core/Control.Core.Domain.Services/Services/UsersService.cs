@@ -1,14 +1,20 @@
 ﻿using Control.Infrastructure.Domain.Models.DTOs;
+using Control.Infrastructure.Util.WebApi;
+using Microsoft.Extensions.Logging;
+using System.Reflection;
 
 namespace Control.Core.Domain.Services
 {
-    public class UsersService
+    public class UsersService : BaseAppService
     {
-        public UsersService() { }
+        public UsersService(IServiceProvider serviceProvider, ILogger<UsersService> logger) : base(serviceProvider, logger) { }
 
-        public List<UserDTO> GetAllUsers()
+        public Result<List<UserDTO>> GetAllUsers()
         {
-            return new();
+            _logger.LogMethodInfo(MethodBase.GetCurrentMethod());
+
+            List<UserDTO> users = new();
+            return ProcessOk(users, true);
         }
     }
 }

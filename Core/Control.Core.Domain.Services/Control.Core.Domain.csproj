@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Control.Infrastructure.Domain.Models\Control.Infrastructure.Domain.Models.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Control.Infrastructure.Util.WebApi\Control.Infrastructure.Util.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

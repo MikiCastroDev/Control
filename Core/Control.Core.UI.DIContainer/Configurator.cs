@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Control.Core.Domain.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Control.Core.UI.DIContainer
 {
@@ -7,6 +8,7 @@ namespace Control.Core.UI.DIContainer
         public static void Configure(IServiceCollection services)
         {
             //services.AddDbContextFactory<>(options);
+            services.AddScoped<UsersService>();
         }
     }
 }

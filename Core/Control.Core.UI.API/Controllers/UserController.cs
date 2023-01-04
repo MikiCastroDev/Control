@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Control.Core.UI.API.Controllers
 {
-    public class UserController : ControllerBase
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControlSpecialController
     {
         private readonly UsersService _usersService;
 
@@ -16,14 +18,7 @@ namespace Control.Core.UI.API.Controllers
         [HttpGet]
         public ActionResult<List<UserDTO>> GetUserList()
         {
-            try
-            {
-                return Ok(_usersService.GetAllUsers());
-            }
-            catch(Exception ex)
-            {
-                return NotFound();
-            }
+            return ProcessResult(_usersService.GetAllUsers());
         }
     }
 }
