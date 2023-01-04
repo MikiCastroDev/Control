@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <Folder Include="OutPorts\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Control.Infrastructure.Domain.Models\Control.Infrastructure.Domain.Models.csproj" />
-    <ProjectReference Include="..\Control.Core.Domain.Services\Control.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>
