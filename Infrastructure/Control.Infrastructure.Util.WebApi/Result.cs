@@ -91,6 +91,8 @@ namespace Control.Infrastructure.Util.WebApi
             }
             return Ok();
         }
+
+        public static Result ErrorLocatingUser(params object[] values) => new Result(false, ErrorType.ErrorLocatingUser, values);
     }
 
     public class Result<T> : Result
@@ -123,6 +125,7 @@ namespace Control.Infrastructure.Util.WebApi
     public enum ErrorType
     {
         #region Users
+        ErrorLocatingUser,
         #endregion
     }
 }

@@ -13,8 +13,8 @@
 		VALUES (2, 'CLIENT', 'ROLE: Client')
 
 	IF NOT EXISTS (SELECT * FROM [dbo].[Users] WHERE [Name] = 'admin')
-		INSERT INTO [dbo].[Users] ([Name], [Email])
-		VALUES ('admin', 'admin@role.app');
+		INSERT INTO [dbo].[Users] ([Name], [Email], [Password])
+		VALUES ('admin', 'admin@role.app', 'admin');
 
 	IF NOT EXISTS (SELECT * FROM [dbo].[Taxs] WHERE [Description] = 'Superreducido')
 		INSERT INTO [dbo].[Taxs] ([Description], [Value])

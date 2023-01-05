@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Reflection;
 using System.Text.Json;
-using System.Xml;
 
 namespace Control.Infrastructure.Util.WebApi
 {

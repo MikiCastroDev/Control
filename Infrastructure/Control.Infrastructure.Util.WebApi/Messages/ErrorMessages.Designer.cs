@@ -59,5 +59,14 @@ namespace Control.Infrastructure.Util.WebApi.Messages {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se ha producido un error en la búsqueda del usuario..
+        /// </summary>
+        internal static string ErrorLocatingUser {
+            get {
+                return ResourceManager.GetString("ErrorLocatingUser", resourceCulture);
+            }
+        }
     }
 }

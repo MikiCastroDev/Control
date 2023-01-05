@@ -3,6 +3,7 @@
 	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newid(), 
     [Name] NVARCHAR(50) NOT NULL, 
     [Email] NVARCHAR(50) NOT NULL, 
+    [Password] NVARCHAR(50) NOT NULL, 
     [CreatedAt] DATETIME NOT NULL DEFAULT getdate(), 
     [CreatedBy] NVARCHAR(50) NOT NULL DEFAULT suser_name(), 
     [ModifiedAt] DATETIME NULL, 
